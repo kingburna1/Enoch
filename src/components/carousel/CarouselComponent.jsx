@@ -9,6 +9,7 @@ import './styless.css';
 import { Pagination, Navigation } from 'swiper/modules';
 import { Star } from 'lucide-react';
 
+
 const CarouselComponent = () => {
   const [swiperRef, setSwiperRef] = useState(null);
 
