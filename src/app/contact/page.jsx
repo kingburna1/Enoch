@@ -53,7 +53,27 @@ const Page = () => {
 
   return (
     <div>
-      <div className="mt-3">
+         
+         <div
+        className="w-full h-[300px] flex flex-col justify-center items-center bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://psychedelicsawarenessshop.com/wp-content/uploads/2019/10/header-bg-1-placeholder.jpg')",
+        }}
+      >
+        <div className="flex flex-col gap-4 justify-center items-center text-white mt-10">
+          <h3 className="text-2xl md:text-6xl font-semibold">
+          Contact Us
+          </h3>
+          <div className="flex gap-2 justify-center items-center text-white">
+            <button className="hover:text-blue-500 transition duration-300 ease-initial">
+              Home
+            </button>
+            <button className=""> / Contact Us</button>
+          </div>
+        </div>
+      </div>
+      <div className="mt-1">
         <iframe
           className="w-full h-[450px] border-0"
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12609.73313540409!2d-122.472866!3d37.803319!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808586e6302615a1%3A0x86bd130251757c00!2sStorey%20Ave%2C%20San%20Francisco%2C%20CA%2094129!5e0!3m2!1sen!2sus!4v1751128114426!5m2!1sen!2sus"
