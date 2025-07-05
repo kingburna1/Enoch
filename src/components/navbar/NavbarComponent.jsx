@@ -9,6 +9,7 @@ import { CiHeart } from "react-icons/ci";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { IoIosMenu } from "react-icons/io";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function NavbarComponent() {
       const [menuOpen, setMenuOpen] = useState(false);
@@ -25,26 +26,26 @@ export default function NavbarComponent() {
       <div className="flex justify-between border-1 border-blue-700">
         <div></div>
         <div className="text-[14px]">
-          <nav className="flex items-center gap-1.5 border-r-1 border-blue-900 text-white">
-            <div className="border-1 border-blue-600 py-2 px-8">
-              <a href="#">Welcome to Our</a>
+          <nav className="flex items-center gap-1.5 border-r-1 border-gray-400 text-white">
+            <div className="border-1  border-gray-400 py-2 px-8 cursor-pointer">
+              <a href="/">Welcome to Our</a>
             </div>
-            <div className="flex gap-1.5 items-center border-r-1 border-blue-600 px-1.5 py-2">
+            <div className="flex gap-1.5 items-center border-r-1  border-gray-400 px-1.5 py-2">
               <FaRegFolderOpen />
-              <a href="#">BLOG</a>
+              <a href="/blog">BLOG</a>
             </div>
-            <div className="flex gap-1.5 items-center pr-15 py-2 border-r-1 border-blue-700">
+            <div className="flex gap-1.5 items-center pr-15 py-2 border-r-1   border-gray-400 cursor-pointer">
               <RiFileCopyLine />
-              <a href="#">FREQUENTLY ASKED QUESTIONS</a>
+              <a href="/faq">FREQUENTLY ASKED QUESTIONS</a>
             </div>
-            <div className="flex gap-1.5 items-center pr-15 py-3.5 border-r-1 border-blue-900" />
+            <div className="flex gap-1.5 items-center pr-15 py-3.5 border-r-1  border-gray-400" />
           </nav>
         </div>
       </div>
 
       <div className="flex justify-center ml-32 gap-4 text-amber-50 text-[14px]">
-        <div className="border-r-1 border-blue-600 pr-4">STORE!</div>
-        <div className="border-r-1 border-blue-600 pr-4">Contact us ?</div>
+        <Link href="/shopp" className="border-r-1  border-gray-400 pr-4 cursor-pointer">STORE!</Link>
+        <Link href="/contact" className="border-r-1  border-gray-400 pr-4 cursor-pointer">Contact us ?</Link>
       </div>
 
       {/* BACKDROP OVERLAY */}
@@ -144,13 +145,13 @@ export default function NavbarComponent() {
             <span>Shop By Department</span>
             <IoIosMenu size={30} color="black" />
           </div>
-          <a className="text-black hover:text-blue-600 p-2">Home</a>
-          <a className="text-black hover:text-blue-800 p-2">ABOUT US</a>
-          <a className="text-black hover:text-blue-800 p-2">FREQUENTLY ASKED QUESTIONS</a>
-          <a className="text-black hover:text-blue-800 p-2">SHOP</a>
-          <a className="text-black hover:text-blue-800 p-2">BLOG</a>
-          <a className="text-black hover:text-blue-800 p-2">CONTACT US</a>
-          <a className="text-black hover:text-blue-800 p-2">TESTIMONIALS</a>
+          <a href="/" className="text-black hover:text-blue-600 p-2 cursor-pointer">Home</a>
+          <a href="/about"  className="text-black hover:text-blue-800 p-2 cursor-pointer">ABOUT US</a>
+          <a href="/faq" className="text-black hover:text-blue-800 p-2 cursor-pointer">FREQUENTLY ASKED QUESTIONS</a>
+          <a href="/shopp" className="text-black hover:text-blue-800 p-2 cursor-pointer">SHOP</a>
+          <a href="/blog" className="text-black hover:text-blue-800 p-2 cursor-pointer">BLOG</a>
+          <a href="/contact" className="text-black hover:text-blue-800 p-2 cursor-pointer">CONTACT US</a>
+          <a href="/testimonials" className="text-black hover:text-blue-800 p-2 cursor-pointer">TESTIMONIALS</a>
         </nav>
       </div>
     </div>

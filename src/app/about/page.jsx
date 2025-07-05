@@ -37,7 +37,7 @@ const page = () => {
               {/* child one  */}
             <div className="flex gap-4">
                 <div>
-                <img className='w-15' src="/aboutimage3.jpg" alt="photo i made" />
+                <img className='w-15' src="https://psychedelicsawarenessshop.com/wp-content/uploads/2023/02/free-shipping-icon-emblem-logo-brush-stroke-style-vector-flat-illustration-yellow-black-element-design-shops-web-192683053.jpg" alt="photo i made" />
                 </div>
                 <div>
                 <h3 className="text-xl font-semibold text-gray-700">Free Shipping</h3>
@@ -80,7 +80,7 @@ const page = () => {
 
 
           <div>
-          <img className='' src="/aboutimage2.jpeg" alt="photo i made" />
+          <img className='' src="https://psychedelicsawarenessshop.com/wp-content/uploads/2023/02/purecybin-dmt-cart-1ml-2.jpeg" alt="photo i made" />
 
           </div>
 

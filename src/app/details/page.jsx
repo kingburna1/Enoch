@@ -99,7 +99,7 @@ const page = () => {
       </div>
 
       {/* Product Title */}
-      <h1 className="text-l md:text-xl  text-gray-700 mb-2">
+      <h1 className="text-l md:text-md  text-gray-700 mb-2">
         1P-LSD Blotters 150mcg - Premium Psychedelic Experience
       </h1>
 
