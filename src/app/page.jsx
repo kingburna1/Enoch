@@ -1,18 +1,34 @@
+'use client'
 import CardComponent from "@/components/card/CardComponent";
 import CardComponent1 from "@/components/card/CardComponent1";
 import CardComponent2 from "@/components/card/CardComponent2";
+import NavbarComponent from "@/components/navbar/NavbarComponent";
 import Image from "next/image";
 import { maintypes } from "./utils/maintypes";
 import { drugs } from "./utils/drugs";
-// import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
-// import { Scrollbar, Navigation, FreeMode, Mousewheel } from 'swiper/modules';
-// import 'swiper/css';
-// import 'swiper/css/scrollbar';
+import { useState } from "react"
+import { ArrowRight, ArrowLeft } from 'lucide-react';
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
+import { Scrollbar, Navigation, FreeMode, Mousewheel, Grid } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/scrollbar';
 
 export default function Home() {
+     const [number, setNumber] = useState(3)
+    const [textEntered, setTextEntered] = useState("")
+    
+    const increment = () => {
+        setNumber(number+1)
+    }
+
+    const decrement = () => {
+        setNumber(number >0 ? number-1 : 0)
+    }
+
   return (
     <div className="text-gray-800 px-14">
-      <p className="uppercase text-center text-sm text-gray-600">Level up your psychedelic experience with our online store! We offer both magic mushrooms and DMT vape pens for sale at affordable prices for those new to this scene. </p>
+      
+      <p className="uppercase text-center text-sm text-gray-600 pt-5">Level up your psychedelic experience with our online store! We offer both magic mushrooms and DMT vape pens for sale at affordable prices for those new to this scene. </p>
     <div className='flex justify-center items-center'>
       <h1 className="font-extrabold text-center text-[25px] py-3 w-[85%] margin-auto">BUY MAGIC MUSHROOMS AND DMT VAPE PEN ONLINE AT PSYCHEDELICS AWARENESS SHOP </h1>
     </div>
@@ -69,7 +85,7 @@ export default function Home() {
       
 
       {/* GRID 3 */}
-      <div className="grid grid-cols-3 pb-4">
+      <div className="grid grid-cols-4 gap-x-42 overflow-x-auto pb-4">
         {drugs.map((item, index) => <CardComponent key={item.id} drug={item} /> )}
       </div>
     </div>
@@ -173,13 +189,55 @@ export default function Home() {
     </section>
 
 
-    <section className="grid grid-cols-[2fr_5fr] gap-4">
-      <div>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</div>
+    <section className="flex gap-4">
+      <div className='w-[600px]'></div>
 
+    <div className='relative group w-[900px]'>
+      <Swiper
+        modules={[ Scrollbar, Navigation, FreeMode, Mousewheel]}
+         navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }}
+        spaceBetween={20}
+        slidesPerView={4}
+  
+        scrollbar={{ draggable: true,
+                      hide: true, }}
+        // allowSlidePrev={true}
+        // touchRatio={1}
+        // threshold-={5}
+        freeMode={true}
+        mousewheel={{ forceToAxis: true }}
+         className="mySwiper cursor-pointer relative">
 
-      <div className='flex gap-3'>
+        {maintypes.map((item, index) => (
+          <SwiperSlide>
+            <CardComponent2 key={item.id} type={item} />
+          </SwiperSlide>
+        ))}
+
+        {/* NAVIGATION */}
+    {/* <div className='flex justify-between relative z-10 top-[50%] py-3 w-full'> */}
+        <button  onClick={decrement} className='swiper-button-prev -translate-y-1/2 opacity-0 group-hover:opacity-100 absolute z-10 top-[50%] left-2 bg-white hover:bg-white/90 transition-opacity duration-500 ease-in-out cursor-pointer shadow-2xl shadow-gray-400 h-8 w-8 rounded-full flex items-center justify-center'><ArrowLeft size={18} /></button>
+        <button  onClick={increment} className='swiper-button-next -translate-y-1/2 opacity-0 group-hover:opacity-100 absolute z-10 top-[50%] right-2 bg-white hover:bg-white/90 transition-opacity duration-500 ease-in-out cursor-pointer shadow-2xl shadow-gray-400 h-8 w-8 rounded-full flex items-center justify-center'><ArrowRight size={18} /></button>
+    {/* </div> */}
+     {/* NAVIGATION END */}
+
+        {/* RESPONSIVE NAVIGATION */}
+    {/* <div className='flex md:hidden justify-between items-center mt-[3%] py-3 border-t-1 border-[#262626]'>
+        <div className='flex gap-4 items-center'>
+            <button  onClick={decrement} className='swiper-button-prev cursor-pointer  border-1 border-[#262626] text-[#999999] h-8 w-8 rounded-full flex items-center justify-center'><ArrowLeft size={18} /></button>
+            <button  onClick={increment} className='swiper-button-next cursor-pointer bg-[#1a1a1a] border-1 border-[#262626] text-white h-8 w-8 rounded-full flex items-center justify-center'><ArrowRight size={18} /></button>
+        </div>
+    </div> */}
+    {/* RESPONSIVE NAVIGATION END */}
+      </Swiper> 
+  </div>
+
+      {/* <div className='flex gap-3'>
         {maintypes.map((item, index) => <CardComponent2 key={item.id} type={item} /> )}
-      </div>
+      </div> */}
     </section>
 
     <section className="pt-10 flex flex-col gap-4">
@@ -254,13 +312,13 @@ export default function Home() {
       </div>
 
       {/* GRID 3 */}
-      <div className="grid grid-cols-3 pb-4">
+       <div className="grid grid-cols-4 gap-x-42 overflow-x-auto pb-4">
         {drugs.map((item, index) => <CardComponent key={item.id} drug={item} /> )}
       </div>
     </div>
     {/* OUR CATEGORIES END */}
 
-    <section className="pt-5">
+    <section className="pt-8">
       <div>
         <h1 className="font-bold text-[26px] pb-3">Looking to Buy LSD Online, Buy DMT Online, or Buy Magic Mushrooms?</h1>
         <p className="text-sm">Are you interested in purchasing LSD, DMT, or Magic Mushrooms online? Look no further than the Psychedelic Awareness Shop. We are committed to delivering an exceptional online shopping experience for all your psychedelic needs. Our extensive product range includes DMT vape cartridges, magic mushrooms, and LSD, all available for discreet delivery to your doorstep. Our user-friendly and secure website ensures an anonymous shopping experience, guaranteeing the swift and perfect delivery of your desired products.</p>

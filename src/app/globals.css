@@ -24,3 +24,21 @@ body {
   
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.Swiper {
+  padding: 0 0 2% 0 !important;
+}
+
+.swiper-slide {
+  /* width: auto !important; */
+  flex-shrink: 0 !important;
+}
+
+.swiper-scrollbar {
+  display: none !important;
+}
+
+.swiper-pagination {
+  margin-bottom: 1rem;
+  color: white;
+}
