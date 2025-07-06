@@ -7,7 +7,7 @@ import { FaCodeCompare } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa6";
 import { products } from '../Anxiety/cart';
 
-export default function DmtGuidePage() {
+export default function Page() {
   return (
     <>
       <div className="max-w-4xl text-[14px] mx-4 p-6 text-gray-900">

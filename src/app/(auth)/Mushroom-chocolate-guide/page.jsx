@@ -9,7 +9,7 @@ import { FaCodeCompare } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa6";
 import { FaArrowDownWideShort } from "react-icons/fa6";
 
-export default function MushroomChocolatePage() {
+export default function Page() {
    const [showSelect, setShowSelect] = useState(false);
   return (
     <>

@@ -6,7 +6,7 @@ import { FaRegHeart } from "react-icons/fa6";
 import { products } from '../Anxiety/cart';
 import React from 'react';
 
-export default function BuyLsdPage() {
+export default function page() {
   return (
     <>
     

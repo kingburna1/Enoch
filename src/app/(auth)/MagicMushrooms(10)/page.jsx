@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 import { FaArrowDownWideShort } from "react-icons/fa6";
 
 
-export default function BuyShroomsPage() {
+export default function Page() {
    const [showSelect, setShowSelect] = useState(false);
   return (
 <>

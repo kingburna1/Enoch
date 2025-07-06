@@ -8,7 +8,7 @@ import { FaRegHeart } from "react-icons/fa6";
 import { products } from '../Anxiety/cart';
 import { FaArrowDownWideShort } from "react-icons/fa6";
 
-export default function BuyEcstasyPage() {
+export default function Page() {
  const [showSelect, setShowSelect] = useState(false);
   return (
     <>
