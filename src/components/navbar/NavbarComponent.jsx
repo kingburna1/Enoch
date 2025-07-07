@@ -23,7 +23,7 @@ export default function NavbarComponent() {
         <div className="bg-[#2370F4] relative">
 
       {/* First section of the navbar - leave untouched for responsiveness */}
-      <div className="flex justify-between border-1 border-blue-700">
+      <div className="flex justify-between border-1 border-gray-400">
         <div></div>
         <div className="text-[14px]">
           <nav className="flex items-center gap-1.5 border-r-1 border-gray-400 text-white">

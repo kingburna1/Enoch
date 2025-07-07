@@ -8,6 +8,7 @@ import { FaCodeCompare } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa6";
 import { products } from '../Anxiety/cart';
 import { FaArrowDownWideShort } from "react-icons/fa6";
+// Adjust the minWidth as needed
 
 export default function page() {
     const [showSelect, setShowSelect] = useState(false);
@@ -78,7 +79,7 @@ export default function page() {
 
               {/* product grid */}
               <div>
-                  <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 px-4'>
+                  <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 px-4'>
                       {products.slice(43,47).map(product => (
                           <div key={product.id} className='group flex flex-col mt-2 pt-3 hover:shadow-xl p-4'>
                               <div className='relative'>
@@ -93,8 +94,8 @@ export default function page() {
                                   <div className='group relative'>
                                       <div className='flex p-2 px-5 absolute bottom-4 left-10 bg-blue-600 justify-between text-center gap-3 items-center
                                       opacity-0 group-hover:opacity-100 transition duration-300'>
-                                          <div><FaCodeCompare color='white' size={16} /></div>
-                                          <div className='text-white text-[14px]'>ADD TO CART</div>
+                                          <div className="text-[10px] md:text-[16px]"><FaCodeCompare color='white' /></div>
+                                          <div className='text-white text-[7px] md:text-[14px]'>ADD TO CART</div>
                                           <div>{/* quick view icon placeholder */}</div>
                                       </div>
                                   </div>
