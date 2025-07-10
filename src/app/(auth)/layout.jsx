@@ -36,8 +36,8 @@ export default function DashboardLayout({ children }) {
   return (
     <div className="relative min-h-screen">
       {/* Header section */}
-      <div className="bg-gray-100 py-10 flex px-4 justify-center items-center flex-col">
-        <h1 className="text-5xl text-gray-600 font-bold pl-4 mb-3">
+      <div className="bg-gray-100 py-10 flex  justify-center items-center flex-col">
+        <h1 className="text-lg md:text-5xl text-gray-600 font-bold pl-4 mb-3">
           {activeCategory || 'Shop'}
         </h1>
         <div className="flex space-x-2 text-sm text-gray-600">
@@ -147,7 +147,7 @@ export default function DashboardLayout({ children }) {
         </aside>
 
         {/* Main content */}
-        <main className="flex-1 md:ml-4 p-4">{children}</main>
+        <main className="flex-1  md:ml-4 p-2">{children}</main>
       </div>
     </div>
   );

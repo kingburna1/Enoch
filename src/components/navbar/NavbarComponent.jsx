@@ -20,7 +20,7 @@ export default function NavbarComponent() {
   const stopPropagation = (e) => e.stopPropagation();
   return (
     <div>
-        <div className="bg-[#2370F4] relative">
+        <div className="bg-[#2370F4] relative ">
 
       {/* First section of the navbar - leave untouched for responsiveness */}
       <div className="flex justify-between border-1 border-gray-400">
