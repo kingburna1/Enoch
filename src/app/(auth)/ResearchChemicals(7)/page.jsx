@@ -78,7 +78,7 @@ export default function page() {
         
               {/* head section end */}
                 <div>
-                      <div className='grid grid-cols-3 gap-3 px-4 '>
+                      <div className='grid grid-cols-2 lg:grid-cols-3 gap-3 px-4 '>
                           {products.slice(48,54).map(product => (
         
                               <div key={product.id} className='group flex flex-col mt-2 pt-3 hover:shadow-xl p-4'>

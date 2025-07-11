@@ -172,7 +172,7 @@ export default function BuyShroomsPage() {
 
       {/* head section end */}
         <div>
-              <div className='grid grid-cols-3 gap-3 px-4 '>
+              <div className='grid grid-cols-2 lg:grid-cols-3 gap-3 px-5 '>
                   {products.slice(27,38).map(product => (
 
                       <div key={product.id} className='group flex flex-col mt-2 pt-3 hover:shadow-xl p-4'>
@@ -181,12 +181,21 @@ export default function BuyShroomsPage() {
                         <div className='absolute top-5 right-5'><FaRegHeart size={20} /></div>
                         <div className='group relative'>
 
-                        <div className='flex p-2 px-5 absolute bottom-4 left-10 bg-blue-600 justify-between text-center gap-3 items-center
-                                        opacity-0 group-hover:opacity-100 transition duration-300'>
-                          <div><FaCodeCompare color='white' size={16} /></div>
-                          <div className='text-white text-[14px]'>ADD TO CART <span></span></div>
-                         <div>  {/* quick view icon is supposed to be here   */} </div>
-                        </div>
+                                <div className='flex absolute bottom-4 left-4 sm:left-6 md:left-10
+     bg-blue-600 items-center justify-between text-center gap-2 sm:gap-3
+     p-2 sm:p-3 md:p-4 opacity-0 group-hover:opacity-100 transition duration-300'>
+
+  <div><FaCodeCompare color='white' size={16} /></div>
+  
+  <div className='text-white text-[12px] sm:text-[13px] md:text-[14px]'>
+    ADD TO CART <span></span>
+  </div>
+  
+  <div>
+    {/* quick view icon is supposed to be here */}
+  </div>
+</div>
+
                       </div>
 
                         </div>

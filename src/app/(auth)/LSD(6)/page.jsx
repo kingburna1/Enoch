@@ -133,6 +133,33 @@ export default function BuyLsdPage() {
                 </div>
           </div>
 
+          
+    {/* SMALL SCREENS */}
+<div className='mt-4 md:hidden px-4'>
+  {!showSelect ? (
+    <div
+      className='flex justify-end'
+      onClick={() => setShowSelect(true)}
+    >
+      <FaArrowDownWideShort size={30} color='blue' />
+    </div>
+  ) : (
+    <div className='mt-2'>
+      <select
+        className='border border-gray-300 text-gray-600 p-2 w-full rounded'
+        onBlur={() => setShowSelect(false)}  // hide select after choosing / blur
+      >
+        <option>Default sorting</option>
+        <option>Sort by popularity</option>
+        <option>Sort by average rating</option>
+        <option>Sort by latest</option>
+        <option>Sort by price: low to high</option>
+        <option>Sort by price: high to low</option>
+      </select>
+    </div>
+  )}
+</div>
+
       {/* head section end */}
         <div>
               <div className='grid grid-cols-3 gap-3 px-4 '>

@@ -73,7 +73,7 @@ export default function Page() {
 
       {/* Products Grid */}
       <div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-4 sm:px-8 py-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 px-4 sm:px-8 py-6">
           {products.slice(0, 4).map(product => (
             <div key={product.id} className="group flex flex-col mt-2 pt-3 hover:shadow-xl p-4 rounded-md shadow-sm bg-white">
               <div className="relative">

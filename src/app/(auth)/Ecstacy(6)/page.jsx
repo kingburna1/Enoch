@@ -12,7 +12,7 @@ export default function BuyEcstasyPage() {
  const [showSelect, setShowSelect] = useState(false);
   return (
     <>
-    <div className="max-w-3xl text-[14px]  p-6 text-gray-900">
+    <div className="max-w-2xl text-[14px]  p-3 text-gray-900">
       <h1 className="text-xl font-bold mb-4">
         Buy Ecstasy Online in 2025 – Trusted Source for MDMA Pills and Pure Molly
       </h1>
@@ -211,7 +211,7 @@ export default function BuyEcstasyPage() {
 
       {/* head section end */}
         <div>
-              <div className='grid grid-cols-3 gap-3 px-4 '>
+              <div className='grid grid-cols-2 lg:grid-cols-3 gap-3 px-4'>
                   {products.slice(15,22).map(product => (
 
                       <div key={product.id} className='group flex flex-col mt-2 pt-3 hover:shadow-xl p-4'>

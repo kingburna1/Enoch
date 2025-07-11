@@ -1,20 +1,22 @@
 'use client';
-
+import { useState } from "react";
 import React from 'react';
 import { CiGrid41 } from "react-icons/ci";
 import { CiBoxList } from "react-icons/ci";
 import { FaCodeCompare } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa6";
 import { products } from '../Anxiety/cart';
+import { FaArrowDownWideShort } from "react-icons/fa6";
 
 export default function DmtGuidePage() {
+  const [showSelect, setShowSelect] = useState(false);
   return (
     <>
-      <div className="max-w-4xl text-[14px] mx-4 p-6 text-gray-900">
-        <h1 className="text-xl font-bold mb-4">
+      <div className="max-w-4xl text-[14px] break-words mx-4 p-6 text-gray-900">
+        <h1 className="text-lg text-wrap font-bold flex flex-wrap mb-4">
           The Ultimate Guide to DMT Vape Pens and Cartridges: Everything You Need to Know in 2025
         </h1>
-        <p className="mb-4">
+        <p className="mb-4 text-wrap text-[12px] ">
           As the popularity of psychedelic experiences grows, so does the demand for convenient, efficient,
           and portable ways to consume DMT (Dimethyltryptamine). Among the most innovative developments in this
           space are DMT vape pens and DMT vape cartridges—a powerful and discreet way to explore this mind-altering
@@ -160,47 +162,76 @@ export default function DmtGuidePage() {
       </div>
 
       {/* the part of the icon is here */}
-      <div>
-        {/* head section here */}
-        <div className=' mt-4'>
-          <div className='flex justify-between items-center px-8 border-b-1 border-gray-200 pb-6'>
-            <div>showing all 4 results</div>
-            <div className='flex items-center gap-4'>
-              <div><CiGrid41 size={25} color='blue'/></div>
-              <div><CiBoxList size={25} color='blue' /></div>
-              <div className='flex items-center'>
-                <div>Show :</div>
-                <div>
-                  <select className='border-1 border-gray-300 p-1 text-gray-600 text-[16px]'>
-                    <option>6</option>
-                    <option>9</option>
-                    <option>12</option>
-                    <option>24</option>
-                    <option>32</option>
-                  </select>
-                </div>
-              </div>
+   
 
+{/* cart section here  */}
+        <div>
+      {/* head section here */}
+             {/* LARGE SCREENS */}
+      <div className='mt-4 hidden md:block'>
+        <div className='flex justify-between items-center px-8 border-b border-gray-200 pb-6'>
+          <div>showing all 4 results</div>
+          <div className='flex items-center gap-4'>
+            <div><CiGrid41 size={25} color='blue' /></div>
+            <div><CiBoxList size={25} color='blue' /></div>
+            <div className='flex items-center'>
+              <div>Show :</div>
               <div>
-                <div>
-                  <select className='border-1 border-gray-300 text-gray-600 p-1 text-[16px]'>
-                    <option>Default sorting</option>
-                    <option>Sort by popularity</option>
-                    <option>Sort by average rating</option>
-                    <option>Sort by latest</option>
-                    <option>Sort by price: low to high </option>
-                    <option>Sort by price: high to low </option>
-                  </select>
-                </div>
+                <select className='border border-gray-300 p-1 text-gray-600 text-[16px]'>
+                  <option>6</option>
+                  <option>9</option>
+                  <option>12</option>
+                  <option>24</option>
+                  <option>32</option>
+                </select>
               </div>
-
+            </div>
+            <div>
+              <select className='border border-gray-300 text-gray-600 p-1 text-[16px]'>
+                <option>Default sorting</option>
+                <option>Sort by popularity</option>
+                <option>Sort by average rating</option>
+                <option>Sort by latest</option>
+                <option>Sort by price: low to high</option>
+                <option>Sort by price: high to low</option>
+              </select>
             </div>
           </div>
         </div>
+      </div>
+
+    {/* SMALL SCREENS */}
+<div className='mt-4 md:hidden px-4'>
+  {!showSelect ? (
+    <div
+      className='flex justify-end'
+      onClick={() => setShowSelect(true)}
+    >
+      <FaArrowDownWideShort size={30} color='blue' />
+    </div>
+  ) : (
+    <div className='mt-2'>
+      <select
+        className='border border-gray-300 text-gray-600 p-2 w-full rounded'
+        onBlur={() => setShowSelect(false)}  // hide select after choosing / blur
+      >
+        <option>Default sorting</option>
+        <option>Sort by popularity</option>
+        <option>Sort by average rating</option>
+        <option>Sort by latest</option>
+        <option>Sort by price: low to high</option>
+        <option>Sort by price: high to low</option>
+      </select>
+    </div>
+  )}
+</div>
+
+
+      {/* head section end */}
 
         {/* head section end */}
         <div>
-          <div className='grid grid-cols-3 gap-3 px-4 '>
+          <div className='grid grid-cols-2 lg:grid-cols-3 gap-3 px-4 '>
             {products.slice(5,15).map(product => (
               <div key={product.id} className='group flex flex-col mt-2 pt-3 hover:shadow-xl p-4'>
                 <div className='relative'>
