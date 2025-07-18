@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import CardComponent from "@/components/card/CardComponent";
 import CardComponent1 from "@/components/card/CardComponent1";
@@ -12,6 +13,19 @@ import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Scrollbar, Navigation, FreeMode, Mousewheel, Grid } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
+=======
+import CardComponent from "../components/card/CardComponent";
+import CardComponent1 from "../components/card/CardComponent1";
+import CardComponent2 from "../components/card/CardComponent2";
+import Image from "next/image";
+import { maintypes } from "./utils/maintypes";
+import { drugs } from "./utils/drugs";
+
+// import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
+// import { Scrollbar, Navigation, FreeMode, Mousewheel } from 'swiper/modules';
+// import 'swiper/css';
+// import 'swiper/css/scrollbar';
+>>>>>>> main
 
 export default function Home() {
      const [number, setNumber] = useState(3)
@@ -46,14 +60,14 @@ export default function Home() {
         </div>
 
         <ol className="flex flex-col gap-3 text-[14.5px] py-3 px-3">
-          <li className="hover:text-[#17a2b8] transition-transform duration-300 ease-in-out cursor-pointer">Uncategorized</li>
-          <li className="hover:text-[#17a2b8] transition-transform duration-300 ease-in-out cursor-pointer">Research Chemicals</li>
-          <li className="hover:text-[#17a2b8] transition-transform duration-300 ease-in-out cursor-pointer">Research Chemicals</li>
-          <li className="hover:text-[#17a2b8] transition-transform duration-300 ease-in-out cursor-pointer">MUSHROOM CHOCOLATE BARS</li>
-          <li className="hover:text-[#17a2b8] transition-transform duration-300 ease-in-out cursor-pointer">Magic Mushrooms</li>
-          <li className="hover:text-[#17a2b8] transition-transform duration-300 ease-in-out cursor-pointer">LSD</li>
-          <li className="hover:text-[#17a2b8] transition-transform duration-300 ease-in-out cursor-pointer">Ecstacy</li>
-          <li className="hover:text-[#17a2b8] transition-transform duration-300 ease-in-out cursor-pointer">DMT VAPE CARTRIDGES</li>
+          <li className="hover:text-[#17a2b8] transition-transform duration-300 ease-in-out cursor-pointer"> <a href="/Anxiety" className="hover:underline">Anxiety</a> </li>
+          <li className="hover:text-[#17a2b8] transition-transform duration-300 ease-in-out cursor-pointer">  <a href="/ResearchChemicals(7)" className="hover:underline">Research Chemicals</a> </li>
+          <li className="hover:text-[#17a2b8] transition-transform duration-300 ease-in-out cursor-pointer"> <a href="/Painmedication" className="hover:underline">Pain Medication</a> </li>
+          <li className="hover:text-[#17a2b8] transition-transform duration-300 ease-in-out cursor-pointer"> <a href="/Mushroom-chocolate-guide" className="hover:underline">MUSHROOM CHOCOLATE BARS</a> </li>
+          <li className="hover:text-[#17a2b8] transition-transform duration-300 ease-in-out cursor-pointer"> <a href="/MagicMushrooms(10)" className="hover:underline">Magic Mushrooms </a> </li>
+          <li className="hover:text-[#17a2b8] transition-transform duration-300 ease-in-out cursor-pointer"><a href="/LSD(6)" className="hover:underline">LSD</a></li>
+          <li className="hover:text-[#17a2b8] transition-transform duration-300 ease-in-out cursor-pointer"><a href="/Ecstacy(6)" className="hover:underline">Ecstacy    </a></li>
+          <li className="hover:text-[#17a2b8] transition-transform duration-300 ease-in-out cursor-pointer">  <a href="/dmt-vape-cartridges" className="hover:underline">DMT VAPE CARTRIDGES</a></li>
         </ol>
       </div>
 

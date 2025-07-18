@@ -22,7 +22,9 @@ const page = () => {
   
     const subtotal = 520;
     const total = subtotal + getShippingCost();
+   
   return (
+    
     <div>
            <div className="w-full h-[200px] bg-gray-100 py-6 flex justify-center">
              <div className="flex items-center space-x-3 text-sm md:text-base">

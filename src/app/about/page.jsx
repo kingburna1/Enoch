@@ -1,5 +1,5 @@
 'use client';
-import CarouselComponent from '@/components/carousel/CarouselComponent';
+import CarouselComponent from '../../components/carousel/CarouselComponent';
 import React from 'react';
 // import CarouselComponent from './../../component/carousel/CarouselComponent';
 

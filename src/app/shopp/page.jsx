@@ -1,4 +1,4 @@
-import CardComponent from "@/components/card/CardComponent";
+import CardComponent from "../../components/card/CardComponent";
 
 export default function Page() {
     return (
@@ -18,15 +18,15 @@ export default function Page() {
         </div>
 
         <ol className="flex flex-col gap-3 text-[14.5px] py-3">
-          <li className="hover:text-blue-500 transition-transform duration-300 ease-in-out cursor-pointer">Anxiety Medication (4)</li>
-          <li className="hover:text-blue-500 transition-transform duration-300 ease-in-out cursor-pointer">DMT VAPE CARTRIDGES (11)</li>
-          <li className="hover:text-blue-500 transition-transform duration-300 ease-in-out cursor-pointer">Ecstacy (6)</li>
-          <li className="hover:text-blue-500 transition-transform duration-300 ease-in-out cursor-pointer">LSD (6)</li>
-          <li className="hover:text-blue-500 transition-transform duration-300 ease-in-out cursor-pointer">Magic Mushrooms (10)</li>
-          <li className="hover:text-blue-500 transition-transform duration-300 ease-in-out cursor-pointer">MUSHROOM CHOCOLATE BARS (6)</li>
-          <li className="hover:text-blue-500 transition-transform duration-300 ease-in-out cursor-pointer">Pain medication (7)</li>
-          <li className="hover:text-blue-500 transition-transform duration-300 ease-in-out cursor-pointer">Research Chemicals (7)</li>
-          <li className="hover:text-blue-500 transition-transform duration-300 ease-in-out cursor-pointer">Uncategorized (9)</li>
+          <li className="hover:text-blue-500 transition-transform duration-300 ease-in-out cursor-pointer"><a href="/Anxiety" className="hover:underline">Anxiety Medication (4)</a></li>
+          <li className="hover:text-blue-500 transition-transform duration-300 ease-in-out cursor-pointer"><a href="/dmt-vape-cartridges" className="hover:underline">DMT VAPE CARTRIDGES (11)</a></li>
+          <li className="hover:text-blue-500 transition-transform duration-300 ease-in-out cursor-pointer"><a href="/Ecstacy(6)" className="hover:underline">Ecstacy  (6) </a> </li>
+          <li className="hover:text-blue-500 transition-transform duration-300 ease-in-out cursor-pointer"> <a href="/LSD(6)" className="hover:underline">LSD</a></li>
+          <li className="hover:text-blue-500 transition-transform duration-300 ease-in-out cursor-pointer"><a href="/MagicMushrooms(10)" className="hover:underline">Magic Mushrooms (10)</a></li>
+          <li className="hover:text-blue-500 transition-transform duration-300 ease-in-out cursor-pointer"><a href="/Mushroom-chocolate-guide" className="hover:underline">MUSHROOM CHOCOLATE BARS (6)</a> </li>
+          <li className="hover:text-blue-500 transition-transform duration-300 ease-in-out cursor-pointer"><a href="/Painmedication" className="hover:underline">Pain Medication</a> </li>
+          <li className="hover:text-blue-500 transition-transform duration-300 ease-in-out cursor-pointer"><a href="/ResearchChemicals(7)" className="hover:underline">Research Chemicals (7)</a> </li>
+          <li className="hover:text-blue-500 transition-transform duration-300 ease-in-out cursor-pointer"> <a href="/Anxiety" className="hover:underline">Uncategorized (9) </a></li>
         </ol>
       </div>
 
