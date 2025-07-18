@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 'use client'
 import CardComponent from "@/components/card/CardComponent";
 import CardComponent1 from "@/components/card/CardComponent1";
@@ -13,19 +13,7 @@ import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Scrollbar, Navigation, FreeMode, Mousewheel, Grid } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
-=======
-import CardComponent from "../components/card/CardComponent";
-import CardComponent1 from "../components/card/CardComponent1";
-import CardComponent2 from "../components/card/CardComponent2";
-import Image from "next/image";
-import { maintypes } from "./utils/maintypes";
-import { drugs } from "./utils/drugs";
 
-// import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
-// import { Scrollbar, Navigation, FreeMode, Mousewheel } from 'swiper/modules';
-// import 'swiper/css';
-// import 'swiper/css/scrollbar';
->>>>>>> main
 
 export default function Home() {
      const [number, setNumber] = useState(3)
