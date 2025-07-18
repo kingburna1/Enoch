@@ -219,8 +219,8 @@ export default function Home() {
 
         {/* NAVIGATION */}
     {/* <div className='flex justify-between relative z-10 top-[50%] py-3 w-full'> */}
-        <button  onClick={decrement} className='swiper-button-prev -translate-y-1/2 opacity-0 group-hover:opacity-100 absolute z-10 top-[50%] left-2 bg-white hover:bg-white/90 transition-opacity duration-500 ease-in-out cursor-pointer shadow-2xl shadow-gray-400 h-8 w-8 rounded-full flex items-center justify-center'><ArrowLeft size={18} /></button>
-        <button  onClick={increment} className='swiper-button-next -translate-y-1/2 opacity-0 group-hover:opacity-100 absolute z-10 top-[50%] right-2 bg-white hover:bg-white/90 transition-opacity duration-500 ease-in-out cursor-pointer shadow-2xl shadow-gray-400 h-8 w-8 rounded-full flex items-center justify-center'><ArrowRight size={18} /></button>
+        <button  onClick={decrement} className='swiper-button-prev -translate-y-1/2 opacity-0 group-hover:opacity-100 absolute z-10 top-[50%] left-8 bg-white hover:bg-white/90 transition-opacity duration-500 ease-in-out cursor-pointer shadow-2xl shadow-gray-400 h-8 w-8 rounded-full flex items-center justify-center'><ArrowLeft size={18} /></button>
+        <button  onClick={increment} className='swiper-button-next -translate-y-1/2 opacity-0 group-hover:opacity-100 absolute z-10 top-[50%] right-5 bg-white hover:bg-white/90 transition-opacity duration-500 ease-in-out cursor-pointer shadow-2xl shadow-gray-400 h-8 w-8 rounded-full flex items-center justify-center'><ArrowRight size={18} /></button>
     {/* </div> */}
      {/* NAVIGATION END */}
 
