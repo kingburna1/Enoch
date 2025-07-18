@@ -19,7 +19,7 @@ const TestimonialCardComponent = ({testimonials}) => {
 
           <div>
              <h4>{testimonials?.name}</h4>
-             <p className="text-gray-400">{testimonials?.time}</p>
+             <p className="text-gray-400 text-xs">{testimonials?.time}</p>
           </div>
 
         </div>
@@ -42,7 +42,7 @@ const TestimonialCardComponent = ({testimonials}) => {
      </ul>
 
      <div>
-     <p className="text-gray-400"> {testimonials?.review}</p>
+     <p className="text-gray-400 text-sm"> {testimonials?.review}</p>
      </div>
 
       

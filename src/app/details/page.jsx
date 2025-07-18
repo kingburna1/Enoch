@@ -1,8 +1,12 @@
 
   "use client";
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Link from 'next/link';
-import { Facebook, Heart, Link2Icon, Linkedin, Repeat, Twitter } from 'lucide-react';
+import { Facebook, Heart, Link2Icon, Linkedin, Repeat, Twitter ,Instagram} from 'lucide-react';
+
+
+
+
 
 const page = () => {
     const [selectedQuantity, setSelectedQuantity] = useState('');
@@ -28,16 +32,43 @@ const page = () => {
     }
     return classes;
   };
+
+  const [count, setCount] = useState(0);
+
+   // Load count from localStorage on component mount
+   useEffect(() => {
+    const storedCount = localStorage.getItem('count');
+    if (storedCount !== null) {
+      setCount(Number(storedCount));
+    }
+  }, []);
+
+  //  Save count to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('count', count);
+  }, [count]);
+
+const handleIncrement = () => setCount(count +1);
+
+const handleDicrement = () => setCount(count -1);
   return (
     <div className="mx-10">
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-2 p-4 h-screen '>
-            <div>
-                <img src="https://psychedelicsawarenessshop.com/wp-content/uploads/2024/11/1p-lsd-blotter-for-sale.webp" alt="" />
+
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-6 p-4 md:p-10 md:h-screen '>
+
+            <div className='md:h-screen sticky top-0 group'>
+                <img src="https://psychedelicsawarenessshop.com/wp-content/uploads/2024/11/1p-lsd-blotter-for-sale.webp" alt=""  className="transition-transform duration-500 group-hover:scale-110" />
             </div>
+
+
+            <div className="flex gap-1  md:justify-between ">
             <div>
+          
             <div className="container  p-4 md:p-8 lg:p-12">
       {/* Breadcrumbs */}
-    <div className='flex justify-between items-center'>
+      <div className='flex '>
+
+    <div className='flex justify-between items-center '>
       <div className="text-gray-600 text-sm mb-4">
         <Link href="/" className="hover:text-blue-600">Home</Link>
         <span className="mx-2">/</span>
@@ -47,8 +78,10 @@ const page = () => {
         <span className="mx-2">/</span>
         <span className="text-gray-800">1P-LSD Blotters 150mcg - Premium...</span>
       </div>
+   </div>
 
-        <div className="flex justify-end items-center mb-4 text-gray-700">
+     <div className=" md:hidden">
+                <div className="flex justify-end items-center mb-4 text-gray-700">
            <div className='group relative overflow-visible'>
             <div>
             <button>
@@ -60,11 +93,11 @@ const page = () => {
             <div className="absolute top-full mt-0 left-0 bg-white shadow-md p-2 rounded 
                     opacity-0 pointer-events-none group-hover:opacity-100 
                     group-hover:pointer-events-auto transition-all duration-300 z-10 flex gap-2">
-                          <Link href="/lsd" className="hover:text-blue-600"><Facebook /></Link>
-                          <Link href="/lsd" className="hover:text-blue-600"><Twitter /></Link>
-                          <Link href="/lsd" className="hover:text-blue-600 fill-black"><Linkedin /></Link>
-                          <Link href="/lsd" className="hover:text-blue-600"><Facebook /></Link>
-                          <Link href="/lsd" className="hover:text-blue-600"><Facebook /></Link>                  
+                          <Link href="/lsd" className="hover:text-blue-600 "><Facebook size={15} className="fill-current text-black hover:text-blue-500" /></Link>
+                          <Link href="/lsd" className="hover:text-blue-600"><Twitter  size={15}  className="fill-current text-black hover:text-blue-500"/></Link>
+                          <Link href="/lsd" className="hover:text-blue-600 fill-black"><Linkedin  size={15} className="fill-current text-black hover:text-blue-500"/></Link>
+                          <Link href="/lsd" className="hover:text-blue-600"><Instagram size={15} className="fill-current text-black hover:text-blue-500"/></Link>
+                          {/* <Link href="/lsd" className="hover:text-blue-600"><Facebook   size={15}/></Link>                   */}
                    </div>
             
             </div>
@@ -95,8 +128,11 @@ const page = () => {
           </svg>
         </button>
       </div>
+            </div>
 
-      </div>
+        
+
+   </div>
 
       {/* Product Title */}
       <h1 className="text-l md:text-md  text-gray-700 mb-2">
@@ -150,14 +186,11 @@ const page = () => {
       <div className="flex items-center mb-6">
         {/* Quantity Input (Matches screenshot but works with the select above) */}
         <div className="flex items-center border border-gray-300 rounded-md mr-4">
-          <button className="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-l-md text-xl" onClick={() => { /* Decrement logic */ }}>-</button>
-          <input
-            type="text"
-            className="w-12 text-center border-l border-r border-gray-300 focus:outline-none text-gray-700"
-            value="1" 
-            readOnly
-          />
-          <button className="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-r-md text-xl" onClick={() => { /* Increment logic */ }}>+</button>
+          <button className="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-l-md text-xl" onClick={handleDicrement}>-</button>
+        
+
+          <h1>{count}</h1>
+          <button className="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-r-md text-xl" onClick={handleIncrement}>+</button>
         </div>
 
         <button className="bg-yellow-400 hover:bg-yellow-500 text-white font-semibold p-3   mr-4 text-xs md:text-l">
@@ -189,6 +222,59 @@ const page = () => {
         <p><span className="font-semibold">Category:</span> <Link href="/lsd" className="hover:text-blue-600">LSD</Link></p>
       </div>    
     </div>
+
+    </div>
+       
+            {/* the additional flex */}
+            <div className="mt-10 hidden md:block">
+                <div className="flex justify-end items-center mb-4 text-gray-700">
+           <div className='group relative overflow-visible'>
+            <div>
+            <button>
+            <Link2Icon />
+            </button>
+            </div>
+            {/* hidden div */}
+              
+            <div className="absolute top-full mt-0 left-0 bg-white shadow-md p-2 rounded 
+                    opacity-0 pointer-events-none group-hover:opacity-100 
+                    group-hover:pointer-events-auto transition-all duration-300 z-10 flex gap-2">
+                          <Link href="/lsd" className="hover:text-blue-600"><Facebook size={15}  className="fill-current text-black hover:text-blue-500"/></Link>
+                          <Link href="/lsd" className="hover:text-blue-600"><Twitter  size={15}  className="fill-current text-black hover:text-blue-500"/></Link>
+                          <Link href="/lsd" className="hover:text-blue-600 fill-black"><Linkedin  size={15}  className="fill-current text-black hover:text-blue-500"/></Link>
+                          <Link href="/lsd" className="hover:text-blue-600"><Instagram  size={15}  className="fill-current text-black hover:text-blue-500"/></Link>
+                          {/* <Link href="/lsd" className="hover:text-blue-600"><Facebook   size={15}/></Link>                   */}
+                   </div>
+            
+            </div>
+       
+        <button className="flex items-center mx-1 p-2 rounded-full hover:bg-gray-100">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-5 h-5"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+          </svg>
+        </button>
+
+        <button className="flex items-center mx-1 p-2 rounded-full hover:bg-gray-100">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-5 h-5"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+          </svg>
+        </button>
+      </div>
+            </div>
             </div>
         </div>
 
@@ -198,7 +284,7 @@ const page = () => {
         <div className="mt-5">
         
         <div className="w-full border-b border-gray-200"> 
-      <div className="flex space-x-8">
+      <div className="flex flex-col md:flex-row md:items-center space-x-8">
        
         <button
           className={getTabClasses('description')}

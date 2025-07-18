@@ -33,7 +33,7 @@ const Page = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
-       
+        loop={true}  
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
